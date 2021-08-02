@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6034215744251908570}
   - component: {fileID: 1504868378530771825}
   - component: {fileID: 791505453345769696}
+  - component: {fileID: 108661834743190342}
   m_Layer: 3
   m_Name: Character1
   m_TagString: Untagged
@@ -66,6 +67,7 @@ Transform:
   m_Children:
   - {fileID: 5259961068976827079}
   - {fileID: 3907672668652570902}
+  - {fileID: 7384382980620698284}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 700
-  m_CrouchSpeed: 0.6
+  m_CrouchSpeed: 0
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -270,6 +272,57 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &108661834743190342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2412107311957289461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550a4461252cae1409e2caeed25efaf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 791505453345769696}
+  attackPoint: {fileID: 7384382980620698284}
+  attackRange: 0.91
+  attackDamage: 10
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  attackRate: 2
+  nextAttackTime: 0
+--- !u!1 &5232219797170088101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7384382980620698284}
+  m_Layer: 3
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7384382980620698284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232219797170088101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.67, y: 3.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2484186875575341180}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6939478662357034944
 GameObject:
   m_ObjectHideFlags: 0

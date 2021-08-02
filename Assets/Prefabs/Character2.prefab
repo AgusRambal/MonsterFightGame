@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 5664695424711761135}
   - component: {fileID: -5480559398778031140}
   - component: {fileID: -6590914022895273103}
+  - component: {fileID: 1258284719258509631}
   - component: {fileID: 7861041981542135895}
   - component: {fileID: 3824216776294366242}
   - component: {fileID: 4612145390182406140}
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 700
-  m_CrouchSpeed: 0.6
+  m_CrouchSpeed: 0
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -218,6 +219,18 @@ MonoBehaviour:
   controller: {fileID: -5480559398778031140}
   animator: {fileID: 5379168219791148832}
   runSpeed: 40
+--- !u!114 &1258284719258509631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9151335057051816806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550a4461252cae1409e2caeed25efaf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &7861041981542135895
 BoxCollider2D:
   m_ObjectHideFlags: 0
