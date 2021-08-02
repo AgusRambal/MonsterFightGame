@@ -197,6 +197,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550a4461252cae1409e2caeed25efaf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2665761051292227544}
+  attackPoint: {fileID: 0}
+  attackRange: 0
+  attackDamage: 0
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRate: 0
+  nextAttackTime: 0
 --- !u!114 &3921160345924140086
 MonoBehaviour:
   m_ObjectHideFlags: 0
