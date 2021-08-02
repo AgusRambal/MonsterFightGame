@@ -237,7 +237,7 @@ MonoBehaviour:
   attackDamage: 0
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   attackRate: 0
   nextAttackTime: 0
 --- !u!61 &7861041981542135895
