@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 5379168219791148832}
   m_Layer: 3
   m_Name: Character2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,6 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550a4461252cae1409e2caeed25efaf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthBar: {fileID: 7592189283348927500, guid: 1491195811ff96b4fb1a8345e5760f10, type: 3}
   animator: {fileID: 5379168219791148832}
   attackPoint: {fileID: 8123600695534586919}
   attackRange: 0.66

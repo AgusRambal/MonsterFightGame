@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    public int maxHealth;
+    int currentHealth;
+    public HealthBarScript healthBar;
+
     public Animator animator;
     public Transform attackPoint;
     public float attackRange;
@@ -13,6 +17,12 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRate;
     public float nextAttackTime;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     void Update()
     {
@@ -24,6 +34,28 @@ public class PlayerCombat : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
+    }
+
+   public void TakeDamage1(int damage)
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die1();
+
+        }
+    }
+
+    void Die1()
+    {
+        animator.SetBool("IsDead", true);
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        GetComponent<Rigidbody2D>().gravityScale = -2;
     }
 
     void Attack()
@@ -46,4 +78,6 @@ public class PlayerCombat : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+
 }
