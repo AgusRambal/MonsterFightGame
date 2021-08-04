@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7206986530799971430}
+  enableMoving: 0
   animator: {fileID: 791505453345769696}
   runSpeed: 40
 --- !u!95 &791505453345769696
@@ -295,6 +296,7 @@ MonoBehaviour:
     m_Bits: 64
   attackRate: 2
   nextAttackTime: 0
+  banner: {fileID: 6364975514544951429, guid: 5f044be3e59faa84f8e1be94e2541c0f, type: 3}
 --- !u!1 &5232219797170088101
 GameObject:
   m_ObjectHideFlags: 0

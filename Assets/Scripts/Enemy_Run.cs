@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,16 +21,16 @@ public class Enemy_Run : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemy.LookAtPlayer();
+            enemy.LookAtPlayer();
 
-        Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
+            Vector2 target = new Vector2(player.position.x, rb.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
 
-        if (Vector2.Distance(player.position, rb.position) <= attackRange)
-        {
-            animator.SetTrigger("Attack");
-        }
+            if (Vector2.Distance(player.position, rb.position) <= attackRange)
+            {
+                animator.SetTrigger("Attack");
+            }
     }
 
 
@@ -37,6 +38,4 @@ public class Enemy_Run : StateMachineBehaviour
     {
         animator.ResetTrigger("Attack");
     }
-
- 
 }

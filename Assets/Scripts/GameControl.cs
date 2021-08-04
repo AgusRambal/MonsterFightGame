@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameControl : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class GameControl : MonoBehaviour
     public int selectedCharacter;
     public GameObject player;
     public GameObject foto1, foto2, foto3, foto4;
+
+    public int roundTime;
+    private float lasTimeUpdate;
+
+    public BannerController banner;
     
     void Start()
     {
@@ -45,6 +51,17 @@ public class GameControl : MonoBehaviour
             foto4.SetActive(true);
         }
 
+        banner.showRoundFight();
+
+    }
+
+    private void Update()
+    {
+        if (roundTime > 0 && Time.time - lasTimeUpdate > 1)
+        {
+            roundTime--;
+            lasTimeUpdate = Time.time;
+        }
     }
 }
  

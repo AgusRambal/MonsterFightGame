@@ -209,6 +209,7 @@ MonoBehaviour:
     m_Bits: 64
   attackRate: 2
   nextAttackTime: 0
+  banner: {fileID: 6364975514544951429, guid: 5f044be3e59faa84f8e1be94e2541c0f, type: 3}
 --- !u!114 &3921160345924140086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3921160345924140086}
+  enableMoving: 0
   animator: {fileID: 2665761051292227544}
   runSpeed: 40
 --- !u!95 &2665761051292227544

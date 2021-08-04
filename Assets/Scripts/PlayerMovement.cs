@@ -10,31 +10,32 @@ public class PlayerMovement : MonoBehaviour
     bool jump;
     bool crouch;
 
+    public bool enableMoving;
+
     public Animator animator;
 
     public float runSpeed;
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            animator.SetBool("IsJumping", true);
-        }
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                animator.SetBool("IsJumping", true);
+            }
 
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
-
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
     }
 
     public void OnLanding()
@@ -52,6 +53,4 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
-
-
 }

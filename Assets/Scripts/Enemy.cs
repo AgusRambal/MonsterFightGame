@@ -5,13 +5,15 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int maxHealth;
-    int currentHealth;
+    public int currentHealth;
 
     public Transform player;
     public bool isFlipped = false;
 
     public HealthBarScript healthBar;
     public Animator animator;
+
+    public BannerController banner;
 
     void Start()
     {
@@ -34,11 +36,14 @@ public class Enemy : MonoBehaviour
         {
             Die();
 
+            //Agregar if de flawless victory
+
         }
     }
 
     void Die()
     {
+        banner.showYouWin();
         animator.SetBool("IsDead", true);
         GetComponent<Collider2D>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;

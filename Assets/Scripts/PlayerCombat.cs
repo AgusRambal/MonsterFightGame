@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public int maxHealth;
-    int currentHealth;
+    public int currentHealth;
     public HealthBarScript healthBar;
 
     public Animator animator;
@@ -17,6 +17,8 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRate;
     public float nextAttackTime;
+
+    public BannerController banner;
 
     private void Start()
     {
@@ -45,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die1();
-
+            //banner.showYouLose();
         }
     }
 
