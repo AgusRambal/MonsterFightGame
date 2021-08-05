@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   healthBar: {fileID: 7592189283348927500, guid: 1491195811ff96b4fb1a8345e5760f10, type: 3}
   animator: {fileID: 7012586133542696271}
   attackPoint: {fileID: 2737083703610353997}
@@ -287,6 +288,8 @@ MonoBehaviour:
   attackRate: 2
   nextAttackTime: 0
   banner: {fileID: 6364975514544951429, guid: 5f044be3e59faa84f8e1be94e2541c0f, type: 3}
+  delayBeforeLoading: 2
+  sceneName: Final
 --- !u!114 &5676533603154057626
 MonoBehaviour:
   m_ObjectHideFlags: 0
