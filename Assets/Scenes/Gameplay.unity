@@ -3641,10 +3641,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1274425151}
-    - target: {fileID: 3144809726365981490, guid: 0de40ba20b18006488323591aaccbe63, type: 3}
-      propertyPath: sceneName
-      value: Final
-      objectReference: {fileID: 0}
     - target: {fileID: 6153320336564950846, guid: 0de40ba20b18006488323591aaccbe63, type: 3}
       propertyPath: m_Name
       value: Enemy1
@@ -3697,18 +3693,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8266580472627107307, guid: 0de40ba20b18006488323591aaccbe63, type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8266580472627107307, guid: 0de40ba20b18006488323591aaccbe63, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8266580472627107307, guid: 0de40ba20b18006488323591aaccbe63, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8285993631133735899, guid: 0de40ba20b18006488323591aaccbe63, type: 3}
       propertyPath: attackDamage
       value: 10
@@ -3753,10 +3737,6 @@ PrefabInstance:
     - target: {fileID: 6364975514544951424, guid: 5f044be3e59faa84f8e1be94e2541c0f, type: 3}
       propertyPath: m_Name
       value: Banner
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364975514544951426, guid: 5f044be3e59faa84f8e1be94e2541c0f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6364975514544951427, guid: 5f044be3e59faa84f8e1be94e2541c0f, type: 3}
       propertyPath: m_Pivot.x
@@ -3874,14 +3854,6 @@ PrefabInstance:
     - target: {fileID: 7592189283198363436, guid: 1491195811ff96b4fb1a8345e5760f10, type: 3}
       propertyPath: m_LocalPosition.y
       value: -979.66565
-      objectReference: {fileID: 0}
-    - target: {fileID: 7592189283348927501, guid: 1491195811ff96b4fb1a8345e5760f10, type: 3}
-      propertyPath: m_Value
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7592189283348927501, guid: 1491195811ff96b4fb1a8345e5760f10, type: 3}
-      propertyPath: m_MaxValue
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7592189283348927502, guid: 1491195811ff96b4fb1a8345e5760f10, type: 3}
       propertyPath: m_Name

@@ -154,11 +154,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6153320336564950846}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -196,10 +196,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
+  sceneName: Final
   player: {fileID: 0}
   isFlipped: 0
   healthBar: {fileID: 0}
   animator: {fileID: 4001394838246049193}
+  banner: {fileID: 6364975514544951429, guid: 5f044be3e59faa84f8e1be94e2541c0f, type: 3}
 --- !u!95 &4001394838246049193
 Animator:
   serializedVersion: 3
