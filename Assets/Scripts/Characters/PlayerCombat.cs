@@ -18,7 +18,6 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRate;
     public float nextAttackTime;
-    public string sceneName;
 
     public BannerController banner;
 
@@ -48,9 +47,9 @@ public class PlayerCombat : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            RestartManager.Gameover();
             Die1();
-            StartCoroutine(Scene());
-            //banner.showYouLose();
+            banner.showYouLose();
         }
     }
 
@@ -83,12 +82,4 @@ public class PlayerCombat : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-
-    public IEnumerator Scene()
-    {
-        yield return new WaitForSeconds(2f);
-        Debug.Log("a");
-        SceneManager.LoadScene(sceneName);
-    }
-
 }

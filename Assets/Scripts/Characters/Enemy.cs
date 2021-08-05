@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+    public string sceneName;
 
     public Transform player;
     public bool isFlipped = false;
@@ -35,9 +37,7 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
-
-            //Agregar if de flawless victory
-
+            StartCoroutine(Scene());
         }
     }
 
@@ -68,5 +68,12 @@ public class Enemy : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
+    }
+
+    public IEnumerator Scene()
+    {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("a");
+        SceneManager.LoadScene(sceneName);
     }
 }
